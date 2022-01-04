@@ -1,5 +1,13 @@
 # @primer/components
 
+## 34.1.1
+
+### Patch Changes
+
+- [#1757](https://github.com/primer/react/pull/1757) [`6e44d786`](https://github.com/primer/react/commit/6e44d7869c1eba7f5ba9d6bfaaf61b78be721bfd) Thanks [@siddharthkp](https://github.com/siddharthkp)! - ActionList v2 Divider: Make divider aria-hidden
+
+* [#1751](https://github.com/primer/react/pull/1751) [`03584e09`](https://github.com/primer/react/commit/03584e09830956bbd4cd721c26566e29966a7cef) Thanks [@talune](https://github.com/talune)! - Fix AvatarStack opacity for children without sx prop
+
 ## 34.1.0
 
 ### Minor Changes
