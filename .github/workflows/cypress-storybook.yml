@@ -60,7 +60,7 @@ jobs:
           name: perf-benchmarks-branch
           path: perf-benchmarks-branch
 
-      - run: ls -r
+      - run: ls -R
 
       - name: Run perf-addon-cli
         id: run-cli
