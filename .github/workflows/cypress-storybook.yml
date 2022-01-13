@@ -52,11 +52,15 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: perf-benchmarks-main
+          path: perf-benchmarks-main
 
       - name: Download main artifacts
         uses: actions/download-artifact@v2
         with:
           name: perf-benchmarks-branch
+          path: perf-benchmarks-branch
+
+      - run: ls -r
 
       - name: Run perf-addon-cli
         id: run-cli
