@@ -57,12 +57,14 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: perf-benchmarks-branch
-          
-      - run: npm install storybook-addon-performance-cli
+
+      - run: 
       
       - name: Run perf-addon-cli
         id: run-cli
-        run: sb-perf -c perf-benchmarks-main -b perf-benchmarks-branch
+        run: | 
+          npm install storybook-addon-performance-cli
+          sb-perf -c perf-benchmarks-main -b perf-benchmarks-branch
 
       - name: Upload sb-perf
         id: sb-perf-upload
