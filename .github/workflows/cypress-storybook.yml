@@ -27,11 +27,7 @@ jobs:
         with:
           name: perf-benchmarks-main
           path: cypress/downloads
-
-  cypress-run-branch:
-    name: Run Cypress tests on branch
-    runs-on: ubuntu-latest
-    steps:
+          
       - name: Checkout repository
         uses: actions/checkout@v2
 
