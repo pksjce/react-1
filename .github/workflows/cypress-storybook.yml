@@ -57,8 +57,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: perf-benchmarks-branch
-
-      - run: 
       
       - name: Run perf-addon-cli
         id: run-cli
