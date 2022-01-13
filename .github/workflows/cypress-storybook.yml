@@ -27,7 +27,7 @@ jobs:
         with:
           name: perf-benchmarks-main
           path: cypress/downloads
-          
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -57,6 +57,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: perf-benchmarks-branch
+          
+      - run: npm install storybook-addon-performance-cli
       
       - name: Run perf-addon-cli
         id: run-cli
