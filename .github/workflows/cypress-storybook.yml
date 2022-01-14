@@ -14,10 +14,11 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start:storybook n
+          start: npm run start:storybook
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
+          working-directory: cypress/performance
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -34,10 +35,11 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start:storybook n
+          start: npm run start:storybook
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
+          working-directory: cypress/performance
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
