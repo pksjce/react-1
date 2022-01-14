@@ -18,7 +18,7 @@ jobs:
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
-          config: integrationFolder=./cypress/performance
+          config: integrationFolder=cypress/integration
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -39,7 +39,7 @@ jobs:
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
-          config: integrationFolder=./cypress/performance
+          config: integrationFolder=cypress/integration
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
