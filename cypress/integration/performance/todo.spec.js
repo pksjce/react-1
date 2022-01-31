@@ -14,7 +14,7 @@
 
 describe('perf tests', () => {
   beforeEach(() => {
-    cy.visit('localhost:6006')
+    cy.visit('/')
     cy.wait(1000)
   })
 
