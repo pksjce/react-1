@@ -15,8 +15,7 @@ jobs:
           wait-on: 'https://primer.style/react/storybook'
           wait-on-timeout: 120
           browser: chrome
-          config: baseUrl=https://primer.style/react/storybook
-          command: npm run cypress:perf-tests
+          command: npm run cypress:perf-tests -- --config baseUrl=https://primer.style/react/storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -34,8 +33,7 @@ jobs:
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
-          config: baseUrl=http://localhost:6006
-          command: npm run cypress:perf-tests
+          command: npm run cypress:perf-tests -- --config baseUrl=http://localhost:6006
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
