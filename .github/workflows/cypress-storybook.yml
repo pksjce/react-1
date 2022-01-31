@@ -8,14 +8,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          ref: main
 
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
-          start: npm run start:storybook
-          wait-on: 'http://localhost:6006'
+          wait-on: 'https://primer.style/react/storybook'
           wait-on-timeout: 120
           browser: chrome
           command: npm run cypress:perf-tests
@@ -28,9 +25,6 @@ jobs:
         with:
           name: perf-benchmarks-main
           path: cypress/downloads
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
 
       - name: Run Cypress
         uses: cypress-io/github-action@v2
