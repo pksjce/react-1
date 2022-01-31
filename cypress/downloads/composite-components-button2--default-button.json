@@ -1,0 +1,121 @@
+{
+  "results": [
+    {
+      "groupId": "Server",
+      "map": {
+        "Render to string": {
+          "type": "timed",
+          "taskName": "Render to string",
+          "averageMs": 5.700000047683716,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "Render to static markup (cannot be hydrated)": {
+          "type": "timed",
+          "taskName": "Render to static markup (cannot be hydrated)",
+          "averageMs": 4.700000047683716,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "String output size": {
+          "type": "static",
+          "taskName": "String output size",
+          "value": "0.25"
+        },
+        "String output size (gzip)": {
+          "type": "static",
+          "taskName": "String output size (gzip)",
+          "value": "0.20"
+        },
+        "Static markup output size": {
+          "type": "static",
+          "taskName": "Static markup output size",
+          "value": "0.25"
+        },
+        "Static markup output size (gzip)": {
+          "type": "static",
+          "taskName": "Static markup output size (gzip)",
+          "value": "0.20"
+        }
+      }
+    },
+    {
+      "groupId": "Client",
+      "map": {
+        "Initial render": {
+          "type": "timed",
+          "taskName": "Initial render",
+          "averageMs": 5.200000047683716,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "Re render": {
+          "type": "timed",
+          "taskName": "Re render",
+          "averageMs": 6.299999952316284,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "Hydrate": {
+          "type": "timed",
+          "taskName": "Hydrate",
+          "averageMs": 4.200000047683716,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "Complete render (mount + layout + paint)": {
+          "type": "timed",
+          "taskName": "Complete render (mount + layout + paint)",
+          "averageMs": 17.5,
+          "samples": 1,
+          "variance": {
+            "upperPercentage": 0,
+            "lowerPercentage": 0,
+            "standardDeviation": 0
+          }
+        },
+        "DOM element count": {
+          "type": "static",
+          "taskName": "DOM element count",
+          "value": "3"
+        },
+        "DOM element count (no nested inline svg elements)": {
+          "type": "static",
+          "taskName": "DOM element count (no nested inline svg elements)",
+          "value": "3"
+        },
+        "React Fiber node count": {
+          "type": "static",
+          "taskName": "React Fiber node count",
+          "value": "24"
+        }
+      }
+    },
+    {
+      "groupId": "Interactions",
+      "map": {}
+    }
+  ],
+  "samples": 1,
+  "copies": 1
+}

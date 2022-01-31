@@ -21,6 +21,7 @@
     "size": "size-limit",
     "prepare": "husky install",
     "cypress:open": "cypress open",
+    "cypress:perf-tests": "cypress run --spec 'cypress/integration/performance/*.spec.js'",
     "sb-perf": "sb-perf"
   },
   "repository": "primer/react",

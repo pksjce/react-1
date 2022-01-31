@@ -18,8 +18,7 @@ jobs:
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
-          spec: |
-            cypress/integration/performance/*.spec.js
+          command: npm run cypress:perf-tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -40,8 +39,7 @@ jobs:
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
           browser: chrome
-          spec: |
-            cypress/integration/performance/*.spec.js
+          command: npm run cypress:perf-tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
