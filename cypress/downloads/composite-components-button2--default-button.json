@@ -6,23 +6,23 @@
         "Render to string": {
           "type": "timed",
           "taskName": "Render to string",
-          "averageMs": 3.200000047683716,
-          "samples": 1,
+          "averageMs": 4.41000006198883,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 58.730156498980335,
+            "lowerPercentage": 25.17007016031551,
+            "standardDeviation": 1.2053629939822352
           }
         },
         "Render to static markup (cannot be hydrated)": {
           "type": "timed",
           "taskName": "Render to static markup (cannot be hydrated)",
-          "averageMs": 4.3999998569488525,
-          "samples": 1,
+          "averageMs": 3.809999966621399,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 23.359582384761648,
+            "lowerPercentage": 23.884517523487247,
+            "standardDeviation": 0.6487680359172735
           }
         },
         "String output size": {
@@ -53,45 +53,45 @@
         "Initial render": {
           "type": "timed",
           "taskName": "Initial render",
-          "averageMs": 3.4000000953674316,
-          "samples": 1,
+          "averageMs": 4,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 12.5,
+            "lowerPercentage": 12.5,
+            "standardDeviation": 0.34058770351782947
           }
         },
         "Re render": {
           "type": "timed",
           "taskName": "Re render",
-          "averageMs": 2.1000001430511475,
-          "samples": 1,
+          "averageMs": 1.9600000381469727,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 32.65306594122544,
+            "lowerPercentage": 28.571437260152134,
+            "standardDeviation": 0.33226500359754696
           }
         },
         "Hydrate": {
           "type": "timed",
           "taskName": "Hydrate",
-          "averageMs": 3.5,
-          "samples": 1,
+          "averageMs": 3.4199999809265136,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 52.04678586796313,
+            "lowerPercentage": 23.9766105516702,
+            "standardDeviation": 0.7533923526307997
           }
         },
         "Complete render (mount + layout + paint)": {
           "type": "timed",
           "taskName": "Complete render (mount + layout + paint)",
-          "averageMs": 12.299999952316284,
-          "samples": 1,
+          "averageMs": 11.809999990463258,
+          "samples": 10,
           "variance": {
-            "upperPercentage": 0,
-            "lowerPercentage": 0,
-            "standardDeviation": 0
+            "upperPercentage": 21.93056822180894,
+            "lowerPercentage": 16.172736113943753,
+            "standardDeviation": 1.1911759301261315
           }
         },
         "DOM element count": {
@@ -116,6 +116,7 @@
       "map": {}
     }
   ],
-  "samples": 1,
+  "storyName": "composite-components-button2--default-button",
+  "samples": 10,
   "copies": 1
 }

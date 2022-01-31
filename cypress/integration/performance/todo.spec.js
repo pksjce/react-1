@@ -21,12 +21,9 @@ describe('perf tests', () => {
   it('should access perf tab', () => {
     cy.get('#storybook-panel-root').then(adminPanel => {
       cy.get('#tabbutton-performance').click()
-      let i = 0
-      while (i < 10) {
-        cy.get('#storybook-addon-performance-start-all-button').click()
-        cy.get('#storybook-addon-performance-save-button').click()
-        i++
-      }
+      cy.get('#storybook-addon-performance-sample-select').select('10 samples')
+      cy.get('#storybook-addon-performance-start-all-button').click()
+      cy.get('#storybook-addon-performance-save-button').click()
     })
   })
 })
