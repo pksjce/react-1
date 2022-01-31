@@ -19,12 +19,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload video artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: failing-videos
-          path: cypress/videos
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         if: success()
