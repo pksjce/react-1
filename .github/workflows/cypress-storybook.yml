@@ -69,9 +69,7 @@ jobs:
           name: sb-perf
           path: sb-perf
 
-      - name: Read sb-perf
-        id: read-sb-perf
-        run: |
+      - run: |
           content=`cat sb-perf/current-vs-baseline.json`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
@@ -79,6 +77,7 @@ jobs:
           content="${content//$'\r'/'%0D'}"
           # end of optional handling for multi line json
           echo "::set-output name=diffJson::$content"
-        - run: |
+
+      - run: |
           echo "${{fromJson(steps.set_var.outputs.diffJson).Client[0].key}}"
           echo "${{fromJson(steps.set_var.outputs.diffJson).Client[0].diffPercentage}}"
