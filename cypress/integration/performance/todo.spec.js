@@ -15,12 +15,14 @@
 describe('perf tests', () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.wait(1000)
+    cy.wait(4000)
   })
 
   it('should access perf tab', () => {
-    cy.get('#tabbutton-performance').click()
-    cy.get('#storybook-addon-performance-start-all-button').click()
-    cy.get('#storybook-addon-performance-save-button').click()
+    cy.get('#storybook-panel-root').then(adminPanel => {
+      cy.get('#tabbutton-performance').click()
+      cy.get('#storybook-addon-performance-start-all-button').click()
+      cy.get('#storybook-addon-performance-save-button').click()
+    })
   })
 })
