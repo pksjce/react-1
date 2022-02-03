@@ -1,3 +1,4 @@
 {
-    "spec": "cypress/integration/performance/*.spec.js"
+    "baseUrl": "http://localhost:6006",
+    "projectId": "6ed4kt"
 }

@@ -12,6 +12,7 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
+          record: true
           wait-on: 'https://primer.style/react/storybook'
           wait-on-timeout: 120
           browser: chrome
@@ -41,6 +42,7 @@ jobs:
           browser: chrome
           command: npm run cypress:perf-tests -- --config baseUrl=http://localhost:6006
         env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifacts
