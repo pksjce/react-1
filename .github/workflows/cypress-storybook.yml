@@ -36,6 +36,7 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
+          record: true
           start: npm run start:storybook
           wait-on: 'http://localhost:6006'
           wait-on-timeout: 120
@@ -87,5 +88,4 @@ jobs:
           echo "::set-output name=diffJson::$content"
 
       - run: |
-          echo "${{fromJson(steps.set_var.outputs.diffJson).Client[0].key}}"
-          echo "${{fromJson(steps.set_var.outputs.diffJson).Client[0].diffPercentage}}"
+          echo "${{fromJson(steps.set_var.outputs.diffJson).Client}}"
