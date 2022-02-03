@@ -19,11 +19,11 @@ describe('perf tests', () => {
   })
 
   it('should access perf tab', () => {
-    cy.get('#storybook-panel-root').then(adminPanel => {
+    cy.get('#storybook-panel-root').then(() => {
       cy.get('#tabbutton-performance').click()
       cy.get('#storybook-addon-performance-sample-select').select('10 samples')
       cy.get('#storybook-addon-performance-start-all-button').click()
-      cy.get('#storybook-addon-performance-save-button', {timeout: 10000}).click()
+      cy.get('#storybook-addon-performance-save-button').then(saveButton => cy.wrap(saveButton).click())
     })
   })
 })
