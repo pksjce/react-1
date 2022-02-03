@@ -12,7 +12,6 @@ jobs:
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
-          record: true
           wait-on: 'https://primer.style/react/storybook'
           wait-on-timeout: 120
           browser: chrome

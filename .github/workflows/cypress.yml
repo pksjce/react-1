@@ -1,0 +1,23 @@
+name: Cypress Tests
+on: [push]
+
+jobs:
+  cypress-run:
+    name: Run Cypress tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Cypress
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run start:storybook
+          wait-on: 'http://localhost:6006'
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          command: npm run cypress:tests -- --config baseUrl=http://localhost:6006
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
