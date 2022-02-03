@@ -12,15 +12,12 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe('example to-do app', () => {
-  beforeEach(() => {
-    cy.visit('localhost:6006')
-    cy.wait(1000)
-  })
-
-  it('should access perf tab', () => {
-    cy.get('#tabbutton-performance').click()
-    cy.get('#storybook-addon-performance-start-all-button').click()
-    cy.get('#storybook-addon-performance-save-button').click()
+describe('Button tests', () => {
+  it('should check for counter update in counter button', () => {
+    cy.visit('http://localhost:6006/iframe.html?id=composite-components-button2--watch-counter-button&viewMode=story')
+    cy.wait(4000)
+    const watchButton = cy.get(':nth-child(1) > button')
+    watchButton.click()
+    watchButton.find('[data-component="ButtonCounter"]').contains('1')
   })
 })
