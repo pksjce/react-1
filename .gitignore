@@ -11,4 +11,4 @@ stats.html
 .env
 cypress/videos
 cypress/downloads
-
+cypress/screenshots
