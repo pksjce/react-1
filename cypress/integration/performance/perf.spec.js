@@ -21,7 +21,7 @@ describe('perf tests', () => {
   })
 
   it('should access perf tab', () => {
-    for (i = 0; i < componentList.length; i++) {
+    for (let i = 0; i < componentList.length; i++) {
       const component = componentList[i]
       cy.visit(`?path=/story/${component}`)
       cy.get('#storybook-panel-root').then(() => {
