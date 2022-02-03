@@ -12,6 +12,8 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
+const componentList = ['composite-components-button2--default-button', 'composite-components-actionlist--actions-story']
+
 describe('perf tests', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -19,14 +21,18 @@ describe('perf tests', () => {
   })
 
   it('should access perf tab', () => {
-    cy.get('#storybook-panel-root').then(() => {
-      cy.get('#tabbutton-performance').click()
-      cy.get('#storybook-addon-performance-sample-select').select('10 samples')
-      cy.get('#storybook-addon-performance-start-all-button').click()
-      cy.get('#storybook-addon-performance-save-button').then(saveButton => {
-        cy.wait(10000)
-        cy.wrap(saveButton).click()
+    for (i = 0; i < componentList.length; i++) {
+      const component = componentList[i]
+      cy.visit(`?path=/story/${component}`)
+      cy.get('#storybook-panel-root').then(() => {
+        cy.get('#tabbutton-performance').click()
+        cy.get('#storybook-addon-performance-sample-select').select('10 samples')
+        cy.get('#storybook-addon-performance-start-all-button').click()
+        cy.get('#storybook-addon-performance-save-button').then(saveButton => {
+          cy.wait(10000)
+          cy.wrap(saveButton).click()
+        })
       })
-    })
+    }
   })
 })
