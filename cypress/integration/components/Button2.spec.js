@@ -12,16 +12,12 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe('perf tests', () => {
-  beforeEach(() => {
-    cy.visit('/')
-    cy.wait(3000)
-  })
-
+describe('Button tests', () => {
   it('should check for counter update in counter button', () => {
-    cy.visit('?path=/story/composite-components-button2--watch-counter-button')
-    const watchButton = cy.get('button').get(0)
+    cy.visit('http://localhost:6006/iframe.html?id=composite-components-button2--watch-counter-button&viewMode=story')
+    cy.wait(4000)
+    const watchButton = cy.get(':nth-child(1) > button')
     watchButton.click()
-    watchButton.text().contains('Watch 1')
+    watchButton.find('[data-component="ButtonCounter"]').contains('1')
   })
 })
