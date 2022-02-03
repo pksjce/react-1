@@ -23,7 +23,10 @@ describe('perf tests', () => {
       cy.get('#tabbutton-performance').click()
       cy.get('#storybook-addon-performance-sample-select').select('10 samples')
       cy.get('#storybook-addon-performance-start-all-button').click()
-      cy.get('#storybook-addon-performance-save-button').then(saveButton => cy.wrap(saveButton).click())
+      cy.get('#storybook-addon-performance-save-button').then(saveButton => {
+        cy.wait(10000)
+        cy.wrap(saveButton).click()
+      })
     })
   })
 })
